@@ -332,10 +332,9 @@ if you are using Doctrine, the matching column definition should use the type ``
 
 .. tip::
 
-    When using the default marking store, checking the current place of an 
-    entity programmatically via Doctrine is best achived by:
-    ``WHERE JSON_CONTAINS_PATH(item.currentPlaces, 'one', '$.draft')``
-    (where `draft` is the place to be checked.
+    On a database level, you can check the current place as follows:
+    ``[WHERE] JSON_CONTAINS_PATH(item.currentPlaces, 'one', '$.draft')``
+    (where `draft` is the place to be checked)
 
 Accessing the Workflow in a Class
 ---------------------------------
